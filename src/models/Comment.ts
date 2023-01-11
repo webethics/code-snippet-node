@@ -1,6 +1,6 @@
 import * as mongoose from "mongoose";
-import { model } from "mongoose";
 import Post from "./Post";
+import { IComment } from "../interfaces/CommentInterface";
 
 const commentSchema = new mongoose.Schema({
   created_at: { type: Date, required: true },
@@ -14,4 +14,6 @@ commentSchema.post("remove", async (doc) => {
   await Post.findOneAndUpdate({ _id: post._id }, { $pull: comment._id });
 });
 
-export default model("comments", commentSchema);
+const Comment = mongoose.model<IComment>("comments", commentSchema);
+
+export default Comment;

@@ -3,10 +3,29 @@
 
 This node.js snippet has included the auth, post, and comments crud operations.
 
+### User
+
+* User Sign-Up With Email Verificaiton
+* User Login
+
+
+### Post
+
+* Create Post
+* Edit Post
+* Delete Post
+* Post Listing With Comments
+
+
+### Comments
+
+* Add Comment To Post
+* Edit Post Comment
+* Delete Post Comment
 
 ## Requirements
 
-* Node 12
+* Node 14
 * Git
 
 ## Common setup
@@ -47,7 +66,7 @@ mail_from_name=<mail_from_name>
 
 Step 7: To start the express server, run the following
 ```bash
-npm run start
+npm run start:dev
 ```
 Final Step:
 

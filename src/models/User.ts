@@ -1,5 +1,5 @@
 import * as mongoose from "mongoose";
-import { model } from "mongoose";
+import { IUser } from "../interfaces/UserInterface";
 
 const userSchema = new mongoose.Schema({
   email: { type: String, required: true },
@@ -12,4 +12,6 @@ const userSchema = new mongoose.Schema({
   updated_at: { type: Date, required: true, default: new Date() },
 });
 
-export default model("users", userSchema);
+const User = mongoose.model<IUser>("users", userSchema);
+
+export default User;

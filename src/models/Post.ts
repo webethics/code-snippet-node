@@ -1,6 +1,6 @@
 import * as mongoose from "mongoose";
-import { model } from "mongoose";
 import Comment from "./Comment";
+import { IPost } from "../interfaces/PostInterface";
 
 const postSchema = new mongoose.Schema({
   user_id: { type: mongoose.Types.ObjectId, required: true },
@@ -20,4 +20,6 @@ postSchema.post("remove", async (doc) => {
   }
 });
 
-export default model("posts", postSchema);
+const Post = mongoose.model<IPost>("posts", postSchema);
+
+export default Post;
