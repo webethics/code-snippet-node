@@ -47,7 +47,7 @@ mail_from_name=<mail_from_name>
 
 Step 7: To start the express server, run the following
 ```bash
-npm run start:dev
+npm run start
 ```
 Final Step:
 
