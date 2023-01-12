@@ -27,6 +27,7 @@ This node.js snippet has included the auth, post, and comments crud operations.
 
 * Node 14
 * Git
+* Typescript
 
 ## Common setup
 
